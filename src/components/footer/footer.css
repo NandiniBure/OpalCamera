@@ -4,7 +4,7 @@
 }
 
 .hidden-item {
-  opacity: 0; Fade out
+  opacity: 0; 
   transform: translateY(-10px); 
   pointer-events: none; 
 }
