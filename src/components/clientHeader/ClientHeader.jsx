@@ -5,12 +5,33 @@ import Menu from "../Menu/menu";
 
 function ClientHeaderLogic({ data,isComponentVisible,setComponentVisible }) {
   const [hideItems, setHideItems] = useState(false);
-const [hideNav, setHideNav] = useState(false);
+  const [hideNav, setHideNav] = useState(false);
 
+  const [screenSize, setScreenSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
- const toggleComponent = () => {
-   setComponentVisible(!isComponentVisible);
- };
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array ensures this runs once on mount
+
+  const toggleComponent = () => {
+    setComponentVisible(!isComponentVisible);
+  };
   useEffect(() => {
     let lastScrollY = 0;
 
@@ -22,7 +43,7 @@ const [hideNav, setHideNav] = useState(false);
       else navbarElement?.classList.remove("scrolled");
 
       setHideItems(currentScrollY > 50);
-      setHideNav(currentScrollY>50)
+      setHideNav(currentScrollY > 50);
       lastScrollY = currentScrollY;
     };
 
@@ -46,10 +67,13 @@ const [hideNav, setHideNav] = useState(false);
       </nav>
       <div
         className={`navbar-container fixed z-[999] w-full flex p-3 justify-between transition-all duration-500 ease-in-out 
-       
-       
-        `
+        ${
+          hideItems && screenSize.width<780
+            ? "-translate-y-full opacity-0"
+            : "translate-y-0 opacity-100"
         }
+       
+        `}
       >
         <div className="flex gap-x-12 ">
           <div className="invert font-large opal">
@@ -154,6 +178,7 @@ const [hideNav, setHideNav] = useState(false);
           </div>
         </div>
       </div>
+
     </>
   );
 }
