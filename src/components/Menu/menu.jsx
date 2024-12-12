@@ -170,10 +170,10 @@ const [isClosing, setIsClosing] = useState(false);
                 </div>
               </div>
             </div>
-            <div class="border-t border-gray-300  "></div>
           </div>
         </div>
       </div>
+      <div class="border-t border-gray-300  "></div>
       <div className="flex relative">
         <div className="lower-section flex py-2 justify-around sm:justify-between w-full px-3 md:w-[50%]">
           <span>Opal Camera Inc.</span>
