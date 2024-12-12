@@ -45,11 +45,11 @@ const [hideNav, setHideNav] = useState(false);
         </p>
       </nav>
       <div
-        className={`navbar-container fixed z-[999] w-full flex p-3 justify-between transition-all duration-500 ease-in-out ${
-          hideItems
-            ? "-translate-y-full opacity-0"
-            : "translate-y-0 opacity-100"
-        }`}
+        className={`navbar-container fixed z-[999] w-full flex p-3 justify-between transition-all duration-500 ease-in-out 
+       
+       
+        `
+        }
       >
         <div className="flex gap-x-12 ">
           <div className="invert font-large opal">
