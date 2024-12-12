@@ -128,7 +128,7 @@ function ClientHeaderLogic({ data,isComponentVisible,setComponentVisible }) {
         <div className="w-1/3 text-white pt-3 md:mr-0 mr-[-120px] relative">
           <svg
             viewBox="0 0 30 24"
-            className="w-[23px] deep:fill-white bg-invert-style fixed  sticky"
+            className="w-[23px] deep:fill-white bg-invert-style  sticky"
           >
             <g clipPath="url(#a)">
               <path
