@@ -68,7 +68,7 @@ function ClientHeaderLogic({ data,isComponentVisible,setComponentVisible }) {
       <div
         className={`navbar-container fixed z-[999] w-full flex p-3 justify-between transition-all duration-500 ease-in-out 
         ${
-          hideItems && screenSize.width<780
+          hideItems && screenSize.width < 780
             ? "-translate-y-full opacity-0"
             : "translate-y-0 opacity-100"
         }
@@ -177,8 +177,8 @@ function ClientHeaderLogic({ data,isComponentVisible,setComponentVisible }) {
             </div>
           </div>
         </div>
+       
       </div>
-
     </>
   );
 }

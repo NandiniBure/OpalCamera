@@ -68,8 +68,10 @@ function Footer({data}) {
           </div>
         </div>
       </div>
+  
+
       <div className="flex relative">
-        <div className="lower-section flex justify-around md:justify-between w-full md:w-[50%] px-2 md:px-4 md:py-2 py-4">
+        <div className="lower-section align-bottom flex justify-around md:justify-between w-full md:w-[50%] px-2 md:px-4 md:py-2 py-4">
           <span>Opal Camera Inc.</span>
           <span>All rights reserved.</span>
         </div>

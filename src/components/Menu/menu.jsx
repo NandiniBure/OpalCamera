@@ -53,10 +53,7 @@ const [isClosing, setIsClosing] = useState(false);
       <div className="max-w-4xl w-full mx-auto bg-white">
         <header className="flex h-[3.5rem] justify-between items-center p-4 border-b">
           <h1 className="text-3xl font-sans font-bold">Opal</h1>
-          <button
-            onClick={handleClose}
-            className="text-4xl font-semibold"
-          >
+          <button onClick={handleClose} className="text-4xl font-semibold">
             ×
           </button>
           <svg
@@ -81,7 +78,7 @@ const [isClosing, setIsClosing] = useState(false);
               inView1 ? "animate-slide-up" : "opacity-0"
             }`}
           >
-            <p className="text-xl font-sans font-medium">Tadpole</p>
+            <p className="text-xl  font-sans font-medium">Tadpole</p>
             <img
               src="./opalc1.png"
               alt="Tadpole"
@@ -107,7 +104,7 @@ const [isClosing, setIsClosing] = useState(false);
           {/* Component 3 */}
           <div
             ref={ref3}
-            className={`flex h-[6.8rem] mt-1 items-center justify-between bg-gray-50 px-10 py-1 rounded-sm transition-transform duration-700 ${
+            className={`flex h-[8rem] mt-1 items-center justify-between bg-gray-50 px-10 py-4 rounded-sm transition-transform duration-700 ${
               inView3 ? "animate-slide-up" : "opacity-0"
             }`}
           >
@@ -123,7 +120,7 @@ const [isClosing, setIsClosing] = useState(false);
         {/* Component 4 (Footer) */}
         <div
           ref={ref4}
-          className={`footer mt-8 bg-white px-0 lg:px-20 transition-transform duration-700 ${
+          className={`footer -mt-5 bg-white px-0 lg:px-20 transition-transform duration-700 ${
             inView4 ? "animate-slide-up" : "opacity-0"
           }`}
         >
@@ -169,6 +166,7 @@ const [isClosing, setIsClosing] = useState(false);
               </div>
             </div>
           </div>
+          <div class="border-t border-gray-300 py-5 "></div>
           <div className="flex relative">
             <div className="lower-section flex -mt-5 justify-around sm:justify-between w-full px-3 md:w-[50%]">
               <span>Opal Camera Inc.</span>
